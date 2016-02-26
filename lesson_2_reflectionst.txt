@@ -1,0 +1,10 @@
+What happens when you initialize a repository? Why do you need to do it?
+
+Gitbash creates  .git directory, to be used for storing meta data files. I need to do it in part because of .git directory.
+
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+Staging area is an intermediate area between the working directory and the repository. It offers some flexibility in terms of adding/removing files of next committ, to give users opportunity to change their minds.
+
+ 
