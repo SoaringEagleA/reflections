@@ -1,12 +1,43 @@
 What happens when you initialize a repository? Why do you need to do it?
 
-Gitbash creates  .git directory, to be used for storing meta data files. I need to do it in part because of .git directory.
+     Gitbash creates  .git directory, to be used for storing meta data files. I need to do it in part because of .git directory.
 
 
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 
-Staging area is an intermediate area between the working directory and the repository. It offers some flexibility in terms of adding/removing files of next committ, to give users opportunity to change their minds.
+    Staging area is an intermediate area between the working directory and the repository. It offers some flexibility in terms of adding/removing files of next committ, to give users opportunity to change their minds.
 
  How can you use the staging area to make sure you have one commit per logical change?
 
- This is still largely by self discipline of the developers, but committ message can help them double check/reorganize this committs.
+    This is still largely by self discipline of the developers, but committ message can help them double check/reorganize this committs.
+
+ What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+     what situations: experimental features, alternative features...
+                      different piece of work (new features, debug)
+     how: keep the different branches seperate, without interference between different branches; keep projects organized (master -- alwasy working/production quality,  development/debug/new feature branches ...), compartalized work...
+
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+     Automatic merging saves time and only operates on consistent parts
+     manual merge is needed and safe for inconsisten parts between different branches and let people decide how to resolve conflicts
+
+     
+
+How do the diagrams help you visualize the branch structure?
+
+    it shows the structure in diagrams (graphs) --> clear relation among different commits.
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+    Assuming two parts have a common ancestor
+	saved: common parts, newly added parts
+	not saved: inconsistent parts in two branches of an original part:   deleted in one, kept in another ...
+
+	the diagram shows that the newly created branch has the tips of  both branches as its parants -- like multiple inheritance ...
+
+	It is okay to remove the label of one branch afterwards: all commits are still saved and accessible from the tip of the newly merged resulting branch
+
+	
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+	automatic merging saves time and is convenient: it only operates on consistent parts. For inconsistent parts, git wouldn't know how to resolve conflicts. So let people resolve conflicts and merge the branches manually is the safe way to go.	
